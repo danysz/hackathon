@@ -44,7 +44,12 @@ public class waitForTaxi extends AppCompatActivity {
         loctionDisplay.setText(String.format(getString(R.string.my_location_format), loction));
         destDisplay.setText(String.format(getString(R.string.my_destination_format), dest));
         timeUntilYouDriveDisplay.setText(String.format(getString(R.string.time_for_arrival_format), String.valueOf(timeUntilYouDrive)));
-        passengerCountDisplay.setText(String.format(getString(R.string.passengers_number_format), String.valueOf(passengerCount)));
+        if(passengerCount >= 10){
+            passengerCountDisplay.setText("נכון לכרגע, המונית הקרובה בתפוצה מלאה");
+        }else{
+            passengerCountDisplay.setText(String.format(getString(R.string.passengers_number_format), String.valueOf(passengerCount)));
+        }
+
         freeSeat = 10 - passengerCount;
         freeSeatDisplay.setBackground(getDrawable(R.drawable.seat+freeSeat ));
     }
