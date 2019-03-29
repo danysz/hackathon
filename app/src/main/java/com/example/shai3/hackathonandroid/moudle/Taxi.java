@@ -8,7 +8,7 @@ public class Taxi {
     private String destination;
     private Boolean inMotion;
     public Taxi(String location, String dest){
-       this.passengerCount=7;
+       this.passengerCount=9;
         this.location=location;
          this.inMotion=false;
         this.destination= dest;

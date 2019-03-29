@@ -8,20 +8,12 @@
     tools:context=".waitForTaxi">
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/warrperContext"
-            app:layout_constraintBottom_toTopOf="@+id/freeSeat"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
                 <TextView
                     android:id="@+id/myLoction"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:textSize="@dimen/text_data_size"
                     android:text="Gps"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.501"
@@ -32,6 +24,7 @@
                     android:id="@+id/dest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_data_size"
                     android:layout_marginTop="36dp"
                     android:text="My destion"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -42,34 +35,36 @@
                     android:id="@+id/time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_data_size"
                     android:layout_marginTop="24dp"
                     android:text="My destion"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/dest" />
 
-                <TextView
-                    android:id="@+id/passengerCount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="23dp"
-                    android:text="My destion"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/time" />
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/passengerCount"
+            android:layout_width="wrap_content"
+            android:layout_height="360dp"
+            android:text="My destion"
+            android:textSize="@dimen/text_data_size"
+            app:layout_constraintBottom_toTopOf="@+id/freeSeat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time" />
 
 
         <ImageView
             android:id="@+id/freeSeat"
-            android:layout_width="234dp"
-            android:layout_height="522dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/seat"
+
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.006"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="warrperContext" />
+            app:layout_constraintTop_toBottomOf="@+id/passengerCount" />
+
 
 
 </android.support.constraint.ConstraintLayout>

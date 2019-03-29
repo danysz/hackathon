@@ -24,6 +24,7 @@ public class waitForTaxi extends AppCompatActivity {
     int timeUntilYouDrive = 0;
     int passengerCount;
     int freeSeat;
+    boolean isMotion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +36,22 @@ public class waitForTaxi extends AppCompatActivity {
     }
 
     private void setData() {
+
         freeSeatDisplay = findViewById(R.id.freeSeat);
         loctionDisplay = findViewById(R.id.myLoction);
         destDisplay = findViewById(R.id.dest);
         timeUntilYouDriveDisplay = findViewById(R.id.time);
         passengerCountDisplay = findViewById(R.id.passengerCount);
-
         loctionDisplay.setText(loction);
         destDisplay.setText(dest);
+
         timeUntilYouDriveDisplay.setText(String.valueOf(timeUntilYouDrive));
-        passengerCountDisplay.setText(String.valueOf(passengerCount));
+        if(passengerCount>=10){
+            passengerCountDisplay.setText("נכון לכרגע, אין מקום במונית הקרובה אלייך");
+        }else{
+            passengerCountDisplay.setText(String.valueOf(passengerCount));
+        }
+
         freeSeat = 10 - passengerCount;
         freeSeatDisplay.setBackground(getDrawable(R.drawable.seat+freeSeat ));
     }
@@ -53,6 +60,7 @@ public class waitForTaxi extends AppCompatActivity {
         if (getIntent().getExtras() == null) {
             return;
         }
+
         loction = getIntent().getStringExtra(USER_LOCTION_EXTRA_KEY);
         dest = getIntent().getStringExtra(DEST_EXTRA_KEY);
         passengerCount = getIntent().getIntExtra(PASSENGER_COUNT_EXTRA_KEY, 0);
