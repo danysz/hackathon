@@ -47,9 +47,7 @@ public class OrderTexi extends AppCompatActivity {
             public void onClick(View v) {
 
                 OrderStatus orderStatus = new OrderStatus(taxies.get(spinner.getSelectedItemPosition()), new User("קריות") );
-                orderStatus.getTaxi().setPassengerCount(orderStatus.getTaxi().getPassengerCount()+1);
                 Intent intent = new Intent(OrderTexi.this ,waitForTaxi.class);
-
                 intent.putExtra(DEST_EXTRA_KEY,orderStatus.getTaxi().getDestination());
                 intent.putExtra(PASSENGER_COUNT_EXTRA_KEY,orderStatus.getTaxi().getPassengerCount());
                 intent.putExtra(USER_LOCTION_EXTRA_KEY,orderStatus.getUser().getLocation());

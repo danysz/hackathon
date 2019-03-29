@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">HackathonAndroid</string>
+    <string name="my_location_format">המיקום שלי: %s</string>
+    <string name="time_for_arrival_format">זמן הגעה צפוי: %s</string>
+    <string name="passengers_number_format">מספר הנוסעים: %s</string>
+    <string name="my_destination_format">היעד שלי: %s</string>
 
 </resources>
