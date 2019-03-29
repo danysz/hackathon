@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "376298118272",
+    "firebase_url": "https://nahagos-98c84.firebaseio.com",
+    "project_id": "nahagos-98c84",
+    "storage_bucket": "nahagos-98c84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376298118272:android:971e350483a9ee3c",
+        "android_client_info": {
+          "package_name": "com.example.shai3.hackathonandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376298118272-mncle89dba401fnh87p59hev8mhnitu2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shai3.hackathonandroid",
+            "certificate_hash": "52d039c0058ce7b6a9375baf3140f18e2b817a68"
+          }
+        },
+        {
+          "client_id": "376298118272-dq66omrcb5itvmm9cesqij4qeo41n1ls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0UjEiNv8Flcpn6_hsY144MYUu0W1LDNU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376298118272-dq66omrcb5itvmm9cesqij4qeo41n1ls.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
