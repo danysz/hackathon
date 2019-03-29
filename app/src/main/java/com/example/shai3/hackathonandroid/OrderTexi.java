@@ -46,7 +46,7 @@ public class OrderTexi extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                OrderStatus orderStatus = new OrderStatus(taxies.get(spinner.getSelectedItemPosition()), new User("krayot") );
+                OrderStatus orderStatus = new OrderStatus(taxies.get(spinner.getSelectedItemPosition()), new User("קריות") );
                 Intent intent = new Intent(OrderTexi.this ,waitForTaxi.class);
                 intent.putExtra(DEST_EXTRA_KEY,orderStatus.getTaxi().getDestination());
                 intent.putExtra(PASSENGER_COUNT_EXTRA_KEY,orderStatus.getTaxi().getPassengerCount());
@@ -64,9 +64,9 @@ public class OrderTexi extends AppCompatActivity {
     }
 
     private void initTaxiesArry (){
-        taxies.add(new Taxi("Hifa", "Akko"));
-        taxies.add(new Taxi("Hifa", "Nhariha"));
-        taxies.add(new Taxi("Nhariha", "Hifa"));
+        taxies.add(new Taxi("חיפה", "עכו"));
+        taxies.add(new Taxi("חיפה", "נהריה"));
+        taxies.add(new Taxi("נהריה", "חיפה"));
     }
 
 }

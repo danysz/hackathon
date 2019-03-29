@@ -41,10 +41,10 @@ public class waitForTaxi extends AppCompatActivity {
         timeUntilYouDriveDisplay = findViewById(R.id.time);
         passengerCountDisplay = findViewById(R.id.passengerCount);
 
-        loctionDisplay.setText(loction);
-        destDisplay.setText(dest);
-        timeUntilYouDriveDisplay.setText(String.valueOf(timeUntilYouDrive));
-        passengerCountDisplay.setText(String.valueOf(passengerCount));
+        loctionDisplay.setText(String.format(getString(R.string.my_location_format), loction));
+        destDisplay.setText(String.format(getString(R.string.my_destination_format), dest));
+        timeUntilYouDriveDisplay.setText(String.format(getString(R.string.time_for_arrival_format), String.valueOf(timeUntilYouDrive)));
+        passengerCountDisplay.setText(String.format(getString(R.string.passengers_number_format), String.valueOf(passengerCount)));
         freeSeat = 10 - passengerCount;
         freeSeatDisplay.setBackground(getDrawable(R.drawable.seat+freeSeat ));
     }
